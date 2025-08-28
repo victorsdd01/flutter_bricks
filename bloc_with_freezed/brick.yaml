@@ -1,0 +1,16 @@
+name: bloc_with_freezed
+description: Generate a Bloc with Freezed state and events, including status enum
+version: 0.1.0+1
+environment:
+  mason: ^0.1.1
+
+vars:
+  project_name:
+    type: string
+    description: Name of the project (for imports)
+    default: my_app
+    prompt: What is the name of your project?
+  bloc_name:
+    type: string
+    description: Bloc name (only used if Bloc is included)
+    prompt: "Bloc class name (e.g., LoginBloc)"

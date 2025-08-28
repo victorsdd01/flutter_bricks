@@ -1,0 +1,32 @@
+name: base_page
+description: A new brick created with the Mason CLI.
+version: 0.1.0+1
+environment:
+  mason: ^0.1.1
+
+vars:
+  project_name:
+    type: string
+    description: Name of the project (for imports)
+    default: my_app
+    prompt: What is the name of your project?
+  base_page_name:
+    type: string
+    description: Name of page
+    default: Example
+    prompt: What is the name of the page?
+  base_page_type:
+    type: boolean
+    description: Type of page (default is Stateless)
+    default: true
+    prompt: What type of page is this? (Stateless, Stateful)
+  include_bloc:
+    type: boolean
+    description: Include Bloc (default is true)
+    default: true
+    prompt: Do you want to include Bloc pattern?
+  bloc_name:
+    type: string
+    description: Name of Bloc
+    default: ExampleBloc
+    prompt: What is the name of the Bloc?
