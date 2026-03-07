@@ -1,5 +1,5 @@
 name: base_page
-description: A new brick created with the Mason CLI.
+description: Generate a page (Stateless or Stateful) with optional Bloc integration
 version: 0.1.0+1
 environment:
   mason: ^0.1.1

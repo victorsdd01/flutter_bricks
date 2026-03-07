@@ -9,15 +9,15 @@ part '{{bloc_name.snakeCase()}}_state.dart';
 
 class {{bloc_name.pascalCase()}}Bloc extends HydratedBloc<{{bloc_name.pascalCase()}}Event, {{bloc_name.pascalCase()}}State> {
 
-  final {{bloc_name.pascalCase()}}UseCases _{{bloc_name.camelCase()}}UseCases;
+  final {{feature_name.pascalCase()}}UseCases _{{feature_name.camelCase()}}UseCases;
 
-  {{bloc_name.pascalCase()}}Bloc({required {{bloc_name.pascalCase()}}UseCases {{bloc_name.camelCase()}}UseCases}) 
-    : _{{bloc_name.camelCase()}}UseCases = {{bloc_name.camelCase()}}UseCases, super(const {{bloc_name.pascalCase()}}State()) {
+  {{bloc_name.pascalCase()}}Bloc({required {{feature_name.pascalCase()}}UseCases {{feature_name.camelCase()}}UseCases})
+    : _{{feature_name.camelCase()}}UseCases = {{feature_name.camelCase()}}UseCases, super(const {{bloc_name.pascalCase()}}State()) {
     on<{{bloc_name.pascalCase()}}Event>(({{bloc_name.pascalCase()}}Event event, Emitter<{{bloc_name.pascalCase()}}State> emit) async {
       switch (event) {
          case _SomeEvent():
           {
-            final Either<Failure, void> result = await _{{bloc_name.camelCase()}}UseCases.fetchData();
+            final Either<Failure, void> result = await _{{feature_name.camelCase()}}UseCases.fetchData();
             result.fold(
               (Failure failure) => emit(state.copyWith(failure: failure)),
               (_) {

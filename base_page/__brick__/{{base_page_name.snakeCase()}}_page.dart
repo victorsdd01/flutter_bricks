@@ -3,7 +3,7 @@ import 'package:{{project_name}}/shared/shared.dart';
 import 'package:{{project_name}}/application/application.dart';
 {{#include_bloc}}import 'package:{{project_name}}/features/{{feature_name.snakeCase()}}/presentation/blocs/{{bloc_name.snakeCase()}}_bloc/{{bloc_name.snakeCase()}}_bloc.dart';{{/include_bloc}}
 
-{{#choose_page_type}}
+{{#base_page_type}}
 class {{ base_page_name.pascalCase() }}Page extends BaseLessState<{{#include_bloc}}{{ bloc_name.pascalCase()}}Bloc{{/include_bloc}}{{^include_bloc}}Null{{/include_bloc}}> {
   const {{ base_page_name.pascalCase() }}Page({super.key});
 
@@ -21,9 +21,9 @@ class {{ base_page_name.pascalCase() }}Page extends BaseLessState<{{#include_blo
     ),
   );
 }
-{{/choose_page_type}}
+{{/base_page_type}}
 
-{{^choose_page_type}}
+{{^base_page_type}}
 class {{ base_page_name.pascalCase() }}Page extends StatefulWidget {
   const {{ base_page_name.pascalCase() }}Page({super.key});
 
@@ -48,4 +48,4 @@ class _{{base_page_name.pascalCase()}}PageState extends BasePageState<{{ base_pa
     ),
   );
 }
-{{/choose_page_type}}
+{{/base_page_type}}

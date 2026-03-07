@@ -1,3 +1,7 @@
 bricks:
+  base_page:
+    path: base_page
+  bloc_with_freezed:
+    path: bloc_with_freezed
   feature_structure:
     path: feature_structure
