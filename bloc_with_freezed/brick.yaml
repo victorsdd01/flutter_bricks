@@ -10,7 +10,12 @@ vars:
     description: Name of the project (for imports)
     default: my_app
     prompt: What is the name of your project?
+  feature_name:
+    type: string
+    description: Name of the feature this bloc belongs to (for imports)
+    default: example
+    prompt: What is the feature name? (e.g., auth, home)
   bloc_name:
     type: string
-    description: Bloc name (only used if Bloc is included)
+    description: Bloc class name
     prompt: "Bloc class name (e.g., LoginBloc)"

@@ -1,6 +1,6 @@
 import 'package:{{project_name}}/shared/shared.dart';
 import 'package:{{project_name}}/core/core.dart';
-import 'package:{{project_name}}/features/{{bloc_name.snakeCase()}}/domain/use_cases/{{bloc_name.snakeCase()}}_use_cases.dart';
+import 'package:{{project_name}}/features/{{feature_name.snakeCase()}}/domain/use_cases/{{feature_name.snakeCase()}}_use_cases.dart';
 
 part '{{bloc_name.snakeCase()}}_bloc.g.dart';
 part '{{bloc_name.snakeCase()}}_bloc.freezed.dart';
@@ -39,6 +39,6 @@ class {{bloc_name.pascalCase()}}Bloc extends HydratedBloc<{{bloc_name.pascalCase
 
   @override
   Map<String, dynamic>? toJson({{bloc_name.pascalCase()}}State state) {
-    return state.toJson(state);
+    return state.toJson();
   }
 }

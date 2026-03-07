@@ -15,11 +15,16 @@ vars:
     description: Name of page
     default: Example
     prompt: What is the name of the page?
+  feature_name:
+    type: string
+    description: Name of the feature this page belongs to (for imports)
+    default: example
+    prompt: What is the feature name? (e.g., auth, home)
   base_page_type:
     type: boolean
-    description: Type of page (default is Stateless)
+    description: Is the page a StatelessWidget? (true = Stateless, false = Stateful)
     default: true
-    prompt: What type of page is this? (Stateless, Stateful)
+    prompt: Is the page a StatelessWidget?
   include_bloc:
     type: boolean
     description: Include Bloc (default is true)
