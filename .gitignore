@@ -35,6 +35,9 @@ build/
 *.temp
 *.cache
 
+# Mason (machine-local brick cache: absolute paths, not shareable)
+.mason/
+
 # Generated files
 *.g.dart
 *.freezed.dart
