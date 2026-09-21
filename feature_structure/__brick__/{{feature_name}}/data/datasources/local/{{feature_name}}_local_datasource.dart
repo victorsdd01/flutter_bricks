@@ -1,25 +1,21 @@
-import 'package:{{project_name}}/core/core.dart';
+import 'package:dartz/dartz.dart';
+import 'package:{{project_name}}/core/errors/failures.dart';
 
- 
-abstract interface class {{ feature_name.pascalCase() }}LocalDataSource {
-
+abstract interface class {{feature_name.pascalCase()}}LocalDataSource {
   Future<Either<Failure, void>> saveData();
-  
 }
 
-class {{ feature_name.pascalCase() }}LocalDataSourceImpl implements {{ feature_name.pascalCase() }}LocalDataSource {
+class {{feature_name.pascalCase()}}LocalDataSourceImpl
+    implements {{feature_name.pascalCase()}}LocalDataSource {
+  const {{feature_name.pascalCase()}}LocalDataSourceImpl();
 
-  const {{ feature_name.pascalCase() }}LocalDataSourceImpl();
-  
   @override
   Future<Either<Failure, void>> saveData() async {
     try {
-      
-      await Future<dynamic>.delayed(const Duration(seconds: 1));
+      await Future<void>.delayed(const Duration(seconds: 1));
       return const Right<Failure, void>(null);
     } catch (e) {
-      return Left<Failure, void>(ExampleFailure(message:"Example failure message"));
+      return Left<Failure, void>(CacheFailure(message: 'Failed to save data: $e'));
     }
   }
 }
-

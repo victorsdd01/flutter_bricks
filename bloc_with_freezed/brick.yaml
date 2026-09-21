@@ -1,6 +1,6 @@
 name: bloc_with_freezed
 description: Generate a Bloc with Freezed state and events, including status enum
-version: 0.1.0+1
+version: 0.2.0
 environment:
   mason: ^0.1.1
 
